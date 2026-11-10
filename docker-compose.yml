@@ -1,0 +1,11 @@
+# Контейнер для практичної роботи з Kafka (Заклецький В., ТР-62мп)
+services:
+  kafka:
+    build: .
+    image: kafka-energy-zakletskyi
+    container_name: kafka-energy-zakletskyi
+    hostname: kafka-zakletskyi
+    init: true
+    volumes:
+      # Python-скрипти редагуються у Windows і одразу видимі в контейнері
+      - ./scripts:/root/kafka-energy-zakletskyi/scripts
